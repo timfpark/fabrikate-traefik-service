@@ -1,8 +1,8 @@
-name: istio-service
-description: Istio service chart
+name: traefik-service
+description: Traefik service chart
 version: 0.1.0
 sources:
-- https://github.com/timfpark/fabrikate-istio-service
+- https://github.com/timfpark/fabrikate-traefik-service
 maintainers:
 - name: timfpark
   email: timfpark@gmail.com
