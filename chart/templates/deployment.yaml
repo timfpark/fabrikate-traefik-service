@@ -30,7 +30,11 @@ spec:
         ports:
         - containerPort: {{ .Values.port }}
           protocol: TCP
-
+        env:
+        - name: JAEGER_AGENT_ENDPOINT
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
 {{ if .Values.configMap }}
         envFrom:
           - configMapRef:

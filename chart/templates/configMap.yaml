@@ -6,8 +6,6 @@ metadata:
   name: {{ .Values.service.name }}-configmap
   namespace: {{ .Release.Namespace }}
 data:
-{{- range $key, $value := .Values.configMap }}
-  {{ $key }}: "{{ $value }}"
-{{- end }}
+{{ toYaml .Values.configMap | indent 2 }}
 
 {{end}}
