@@ -1,8 +1,6 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  annotations:
-    "sidecar.jaegertracing.io/inject": "true"
   name: {{ .Values.service.name }}
   namespace: {{ .Release.Namespace }}
   labels:
